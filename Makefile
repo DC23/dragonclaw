@@ -24,11 +24,11 @@ full: dragonclaw.pdf
 .PHONY: format
 format:
 	for f in *.tex; do \
-        latexindent -w $$f; \
+        latexindent -s -w $$f; \
     done
 
 .PHONY: clean
 clean:
 	echo Cleaning ...
-	rm -rf *.gz *.aux *.log *.out *.bbl *.blg *.bak *.bcf *.xml *.toc *.pdf *.lot *.lof tex/
+	rm -rf *.gz *.aux *.log *.out *.bbl *.blg *.bak *.bcf *.xml *.toc *.pdf *.lot *.lof tex/ *.bak*
 	echo ... done

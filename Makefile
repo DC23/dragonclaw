@@ -21,6 +21,12 @@ full: dragonclaw.pdf
 	$(TEX) $(addsuffix .tex, $(basename $(@)))
 	$(TEX) $(addsuffix .tex, $(basename $(@)))
 
+.PHONY: format
+format:
+	for f in *.tex; do \
+        latexindent -w $$f; \
+    done
+
 .PHONY: clean
 clean:
 	echo Cleaning ...
